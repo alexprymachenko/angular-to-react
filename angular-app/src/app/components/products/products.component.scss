@@ -1,37 +1,45 @@
-.products-main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+.products {
+  &-loader {
+    font-size: 16px;
+    text-align: center;
+  }
 
-  .products-list {
-    list-style: none;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 650px;
-    padding: 34px 0;
-    gap: 12px;
-    border-radius: 14px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-
-    .product-item {
-      width: 40%;
-      border: 0.2px solid gray;
-      border-radius: 22px;
+  &-main {
+    &-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      padding: 14px;
-      box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
-      background-color: aliceblue;
-      cursor: pointer;
-    }
+      align-items: center;
+      margin: auto;
 
-    .product-item:focus {
-      background-color: #61dafb;
-      outline: none;
+      .products-list {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 650px;
+        padding: 34px 0;
+        gap: 12px;
+        border-radius: 14px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+
+        .product-item {
+          width: 40%;
+          border: 0.2px solid gray;
+          border-radius: 22px;
+          display: flex;
+          justify-content: center;
+          padding: 14px;
+          box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+          background-color: aliceblue;
+          cursor: pointer;
+          &:focus {
+            background-color: #61dafb;
+            outline: none;
+          }
+        }
+      }
     }
   }
 }

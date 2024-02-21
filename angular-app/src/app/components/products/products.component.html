@@ -1,15 +1,16 @@
-<main class="products-main-container">
-  <div class="products-title">
-    <h2>Products</h2>
-  </div>
-  <div>
+<main class="products-main">
+  <div class="products-loader" *ngIf="isLoading">Loading...</div>
+  <div class="products-main-container" *ngIf="!isLoading && products?.length">
+    <h2 class="products-title">Products</h2>
     <h3>Total: {{ products.length }}</h3>
-  </div>
-  <div class="products-list"
-       (keydown)="onKeydown($event)"
-       tabindex="0">
-    <app-list-item class="product-item" *ngFor="let product of products" [item]="product">
-      {{product.title}}
-    </app-list-item>
+    <div class="products-list" (keydown)="onKeydown($event)" tabindex="0">
+      <app-list-item
+        class="product-item"
+        *ngFor="let product of products"
+        [item]="product"
+      >
+        {{ product.title }}
+      </app-list-item>
+    </div>
   </div>
 </main>
