@@ -25,8 +25,8 @@ export class ProductsComponent {
 
   constructor() {
     this.isLoading = true;
-    this.apiService.getProducts().then((reponse) => {
-      this.products = reponse.products;
+    this.apiService.getProducts().then((response) => {
+      this.products = response.products;
       this.isLoading = false;
     });
   }
