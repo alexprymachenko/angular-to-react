@@ -25,10 +25,21 @@ export class ProductsComponent {
 
   constructor() {
     this.isLoading = true;
-    this.apiService.getProducts().then((response) => {
-      this.products = response.products;
+  }
+
+  ngOnInit(): void {
+    this.fetchData()
+  }
+
+  async fetchData() {
+    try {
+      const { products } = await this.apiService.getProducts();
+      this.products = products;
       this.isLoading = false;
-    });
+    } catch (e) {
+      console.log('Fetch Data Error:', e);
+    }
+    this.isLoading = false;
   }
 
   ngAfterViewInit() {
