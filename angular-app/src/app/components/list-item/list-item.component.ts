@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input } from '@angular/core';
+import { IProduct } from '../../interfaces/app.interfaces';
 
 @Component({
   selector: 'app-list-item',
@@ -9,7 +10,7 @@ import { Component, ElementRef, Input } from '@angular/core';
   template: `<ng-content></ng-content>`
 })
 export class ListItemComponent {
-  @Input() item: any;
+  @Input() item!: IProduct;
   constructor(private host: ElementRef) { }
 
   focus() {
