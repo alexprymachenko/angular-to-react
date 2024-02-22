@@ -1,10 +1,10 @@
-import { Component, inject, QueryList, ViewChildren } from '@angular/core';
-import { ApiService } from "../../services/api.service";
-import { IProduct } from "../../interfaces/app.interfaces";
-import { CommonModule } from "@angular/common";
-import { ListItemComponent } from "../list-item/list-item.component";
-import { FocusableOption, FocusKeyManager } from "@angular/cdk/a11y";
+import { FocusKeyManager } from "@angular/cdk/a11y";
 import { ENTER } from "@angular/cdk/keycodes";
+import { CommonModule } from "@angular/common";
+import { Component, inject, QueryList, ViewChildren } from '@angular/core';
+import { IProduct } from "../../interfaces/app.interfaces";
+import { ApiService } from "../../services/api.service";
+import { ListItemComponent } from "../list-item/list-item.component";
 
 @Component({
   selector: 'app-products',
